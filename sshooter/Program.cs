@@ -137,7 +137,7 @@ namespace sshooter
 
 					Console.WriteLine("Downloaded #{0}", i);
 				}
-				catch(Exception x)
+				catch(Exception)
 				{
 					Console.Write("Failed #{0}\r", i);
 

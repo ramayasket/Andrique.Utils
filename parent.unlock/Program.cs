@@ -181,7 +181,7 @@ namespace parent.unlock
 
 			CheckAndUnlock();
 			
-			ParallelTask.StartNew(Guard);
+			ExecutionThread.StartNew(Guard);
 
 			Application.Run();
 

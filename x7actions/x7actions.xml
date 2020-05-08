@@ -1,8 +1,0 @@
-<ActionConfiguration
-	xmlns="Andrique.Utils.X7Actions"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="Andrique.Utils.X7Actions x7actions.xsd"
-	>
-	<Action Button="1"/>
-	<Action Button="2"/>
-</ActionConfiguration>
