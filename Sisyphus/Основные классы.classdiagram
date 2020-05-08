@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="0fc60ad8-fb7d-408c-952f-abe95764aac6" name="Основные классы" linkedPackageId="04fc10c0-738b-4173-b1ef-cd26b2feee3b" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="3c66c608-f5c4-4177-a54c-5d9944d3c1fb">
+      <profileInstance Id="6331cb85-9c13-4f4e-ad04-c120a711541d" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="e16ffebd-2b91-47f1-b7b5-1228820131f3">
+      <profileInstance Id="0a67e166-6e5e-40fb-86cb-f05aef3432f9" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="552f1241-01d3-4075-a603-f6d54822e9b1" name="Соискатель" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c54ed92f-fc9a-42ac-9238-d6bcde49f6ba" />
+        <ownedAttributesInternal>
+          <property Id="76ff234d-6404-4f67-81f2-5fa0ab13462d" name="Фамилия" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="92f27700-5ec4-4c25-a97c-03fbc2c3ffeb" />
+          </property>
+          <property Id="9b4f7764-2d10-407f-a9d8-b21762a922fd" name="Имя" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="693bd009-9aab-4961-8c76-7a01ac75e967" />
+          </property>
+          <property Id="67b1a075-fb23-4bea-b334-d3fe660320ee" name="Отчество" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1a3ee12b-e437-4307-ab05-82c0770e69fe" />
+          </property>
+          <property Id="8e6989f7-fa44-47e2-b730-9e4c45b34302" name="Адрес" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="9cbfefc4-47a9-4893-b8ea-e0da948d5c11" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dd48df55-30ce-4bb5-b34c-2ffe7336ee6d" name="Резюме" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1422c82a-aa0f-48a6-be53-d7b239f99a0d" />
+        <suppliersInternal>
+          <dependency Id="a3861f84-a7f1-4cab-878d-1de1071ef793" name="Отклик на вакансию">
+            <classMoniker Id="63e09ba8-5fbe-47e7-8a01-0d92ca774bbc" LastKnownName="Вакансия" />
+            <elementDefinition Id="e458fbdc-aed2-41cb-8bac-aa0d26c9f7de" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="d63b720c-45f1-42d7-b2ba-800bed30f3ed" isSubstitutable="false">
+            <classMoniker Id="6b0074b0-103e-4fb2-8ca9-a255898e8261" LastKnownName="Позиция" />
+            <elementDefinition Id="83704eb8-6c70-48fe-9751-453c3476ea65" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="0b1457ed-e11b-4f96-9010-dcd7489a1e58" isDerived="false" sourceEndRoleName="Резюме" targetEndRoleName="Соискатель" isLeaf="false" isAbstract="false">
+            <classMoniker Id="552f1241-01d3-4075-a603-f6d54822e9b1" LastKnownName="Соискатель" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c2b00947-bc60-4643-949c-e5f877ddf0ec" name="Резюме" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="b9e2ae56-f33b-4cc8-a97a-3c0a4c974ddb" name="Lower" value="*">
+                      <elementDefinition Id="01eaebec-3b3e-4547-b533-12ef038dc54d" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="3909acc3-89df-4c2f-a04c-62be97767e85" name="Upper" value="*">
+                      <elementDefinition Id="9d27d1fa-b229-42b2-9510-cfc0e67573fb" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="da5eea2c-2764-4b09-a548-d77779d92a25" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="c35822dd-adf1-4f33-80b1-5ce6202a115e" name="Соискатель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="58120214-7a66-4600-8759-49f24fa091df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9d407c62-8812-4093-93c2-cd1db9e2205c" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="94e18a28-1757-4200-95bd-ddacbf3a4bb0" name="ПостроитьФильтр" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="48ea4356-8ea8-4b99-94b5-d348e6e482cf" />
+          </operation>
+          <operation Id="14433ca1-734a-4e87-bb1e-86d2e8b735dd" name="ОткликНа" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9391e383-3997-4597-a3bc-035378a8016d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4b0a64f9-9b09-4fbf-b22a-f1f9dcebfbc5" name="Опыт" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="946c72fa-3934-4bf6-8dcc-10b4fbf5f17c" />
+        <targetEnds>
+          <association Id="a2089264-7d9e-42fc-8b51-1bbd8a325763" isDerived="false" sourceEndRoleName="Опыт" targetEndRoleName="Резюме" isLeaf="false" isAbstract="false">
+            <classMoniker Id="dd48df55-30ce-4bb5-b34c-2ffe7336ee6d" LastKnownName="Резюме" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="59200890-31f8-460c-8f0f-24a96e7c4c87" name="Опыт" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="fb7ac284-8659-4f80-a091-1624cbac9703" name="Lower" value="*">
+                      <elementDefinition Id="878f99c0-f604-4313-ac79-95ea9c0821c2" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="e5762f34-c148-43d6-8391-da3b6f154942" name="Upper" value="*">
+                      <elementDefinition Id="4cc6f417-6774-475e-87ee-eacc121e4d1c" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="26032a98-af6d-45da-834b-4f9889693018" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="deee8a44-e249-4528-90ab-9fa0c54f8d1d" name="Резюме" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="1f6823a6-a850-469f-a82b-0bed1d7c21fd" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="614d5f73-ee55-454a-8c52-2a90be69f1a5" />
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property Id="0ef798f2-b3c4-4e84-a40a-6412d72bec83" name="Начало" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c3cc270f-89b1-47ab-8d04-270db153b678" />
+          </property>
+          <property Id="d960b990-a28b-44a1-a022-0db6ff75b46b" name="Конец" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="adf35612-a8bc-4ca1-81ff-16ef84882abe" />
+          </property>
+          <property Id="784f6781-0664-4bb5-939b-cf074c5d8d79" name="Компания" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="eea781bc-687d-4237-900d-7f5512491b0e" />
+          </property>
+          <property Id="d48f349c-58cd-4cae-a9a8-c8e844309288" name="Позиция" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7bbc868c-056b-43bf-aedf-19880be7bdcf" />
+          </property>
+          <property Id="2431d467-e6ab-4fc4-b444-3b1a8c9cea16" name="Описание" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6a665d5-cec8-4b5e-8ce8-836cd6bf6e82" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="6b0074b0-103e-4fb2-8ca9-a255898e8261" name="Позиция" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="24857d4f-e38a-417e-835c-baba591e5596" />
+        <ownedAttributesInternal>
+          <property Id="eebad84a-3776-4067-889e-ee69074773ba" name="Название" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0ef63532-fa57-4e84-8943-b3ec4b4a58e3" />
+          </property>
+          <property Id="7d9584a8-5390-48c9-91b9-503e09e4b176" name="Зарплата" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2d27789f-703d-44f5-b980-a76cb694c8ce" />
+          </property>
+          <property Id="7b8bc7a1-a4a0-4c4b-bba4-235ea90b7cde" name="Обязанности" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ad3b3fbd-7b6c-4410-98b9-36ce185f4eae" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="63e09ba8-5fbe-47e7-8a01-0d92ca774bbc" name="Вакансия" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a7b6a789-b527-4670-8bfe-b65da65e3000" />
+        <generalsInternal>
+          <generalization Id="f0a051df-33a3-4551-9148-72de4700a813" isSubstitutable="false">
+            <classMoniker Id="6b0074b0-103e-4fb2-8ca9-a255898e8261" LastKnownName="Позиция" />
+            <elementDefinition Id="d1a68497-81e7-45b3-8f74-a3431bf5b1ef" />
+          </generalization>
+        </generalsInternal>
+        <targetEnds>
+          <association Id="d17863c4-2ef5-48f4-8e10-01c039c8392f" isDerived="false" sourceEndRoleName="Вакансия" targetEndRoleName="Работодатель" isLeaf="false" isAbstract="false">
+            <classMoniker Id="1fab05a2-de9a-4bf0-a093-cb7ad1cd0a53" LastKnownName="Работодатель" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8cfebcad-279c-4be4-8d07-5e997ee0e891" name="Вакансия" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="bad25d5b-dd8f-4350-b21f-d7e0da1f327b" name="Lower" value="*">
+                      <elementDefinition Id="c112ec78-f418-4556-84c0-6de4b3a9f845" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b2ec904c-42cb-4ecd-bb05-ba7762ae18cd" name="Upper" value="*">
+                      <elementDefinition Id="32575f0d-3084-436e-89ac-59eb6af21939" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="bdcdaf79-a580-494a-a8a4-811e7db479b3" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fab7e341-da2c-44ba-81a1-de5afb5a4d30" name="Работодатель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3dbc67ae-a64e-42ea-a972-3c486d8d0584" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="0c1f8e98-31ee-4d35-bdde-520924440c79" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1fab05a2-de9a-4bf0-a093-cb7ad1cd0a53" name="Работодатель" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="662f5799-f3f4-4298-b74b-feedb0533c1b" />
+        <ownedAttributesInternal>
+          <property Id="2982f800-91f9-4460-9deb-b0cf881bf534" name="Название" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c90e1a46-9c1b-4676-9f25-1baf41651400" />
+          </property>
+          <property Id="222e9081-3266-4b8e-bdd3-f331e7105c63" name="Отрасль" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1f9858c8-03fc-4517-a9db-8e07b20a1893" />
+          </property>
+          <property Id="cec606e8-5c8e-49fb-8beb-c097ed23abd0" name="Коллектив" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2712b5b2-21b6-4792-8daa-eecdf50772a5" />
+          </property>
+        </ownedAttributesInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="04fc10c0-738b-4173-b1ef-cd26b2feee3b" name="Sisyphus">
+    <elementDefinition Id="8fcd3923-8407-4221-8d95-d93279f47982" />
+  </package>
+</logicalClassDesignerModel>

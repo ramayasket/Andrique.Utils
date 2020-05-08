@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<_cleanup>
+	<commands>
+		<command pattern="del &quot;*conflicted copy*&quot; /s" />
+	</commands>
+	<jobs>
+		<job pattern="-ANDRIQUE-cloud.log" remains="4" />
+		<job pattern="-ANDRIQUE-Runner-cloud.log" remains="4" />
+		<job pattern="-RAMAYASKET-cloud.log" remains="4" />
+		<job pattern="-RAMAYASKET-Runner-cloud.log" remains="4" />
+	</jobs>
+</_cleanup>

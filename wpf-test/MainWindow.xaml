@@ -1,0 +1,11 @@
+﻿<Window x:Class="wpf_test.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="350" Width="525"
+		FontFamily="Verdana">
+	<StackPanel VerticalAlignment="Stretch" Orientation="Vertical" Name="Outer">
+		<ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Hidden" Name="Scroller" VerticalAlignment="Stretch">
+			<Button Name="_button" Height="2000" Width="200" Content="ZLP!" FontSize="80"/>
+		</ScrollViewer>
+	</StackPanel>
+</Window>

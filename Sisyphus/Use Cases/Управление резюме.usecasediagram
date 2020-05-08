@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="b20359d2-8237-4400-b0c7-baf4228175f1" name="Управление резюме" linkedPackageId="147c6278-2030-4704-95f8-8dc19ad6b82b" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="bb3db7d2-f0c8-4d2d-9b19-3a8050b9deb8" name="Соискатель" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="b2f98ff0-bca6-4454-8652-7aa48f43e65b" />
+        <targetEnds>
+          <association Id="e1de627b-12da-444f-b70f-937e524fd6be" isDerived="false" sourceEndRoleName="Соискатель" targetEndRoleName="Создание резюме" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="afdbeee6-772c-49d3-b8fd-e18a60aab88b" LastKnownName="Создание резюме" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e03b8e8-914e-4496-a225-3f3d7e7f3298" name="Соискатель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8398ceb8-ff08-443e-8556-10188e85e0be" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="244569a1-15d3-4956-9cfe-08fb70ee6005" name="Создание резюме" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5ee5e0e9-2d51-4aad-a093-6542076d891b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="84bb0da3-c39e-4c3d-8915-0a01494af229" />
+          </association>
+          <association Id="603a29cd-d504-4a74-b630-733a9d48d3c0" isDerived="false" sourceEndRoleName="Соискатель" targetEndRoleName="Изменение резюме" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e62f8a1b-9640-4a44-a0cd-2d329ec31dde" LastKnownName="Изменение резюме" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="120e2d14-b5e1-4bed-8ce4-3b3fbbf528d3" name="Соискатель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="20f9e6cb-ea03-4324-bff8-7908703d65b9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="fb605573-14cf-424b-95db-353c7d3264b0" name="Изменение резюме" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="ab0a5e49-da7f-4647-87c4-2987aafb62ff" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="64cde6dc-6b1d-48f2-a1ab-82925a928939" />
+          </association>
+          <association Id="474aaa81-aea2-4080-86ef-1dd15f3b2c59" isDerived="false" sourceEndRoleName="Соискатель" targetEndRoleName="Выбор резюме для отклика" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="3e7e2b1e-c2e3-4153-9ccd-987b9fbeb4a6" LastKnownName="Выбор резюме для отклика" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="92ab8559-3392-4b3e-a9ed-3d6c5e9684e3" name="Соискатель" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="e92af97a-9665-400d-b3fa-dc383c1d2fe6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="9d6bdb7a-22ca-4725-8583-1224555d4be5" name="Выбор резюме для отклика" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3a68f0ea-0263-4eee-889c-61a937f3a787" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="55b5a96c-e1da-48ff-874c-48c142e57b9a" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="f8fce506-59fe-4fc8-9a93-a60610ce7555" name="Подсистема управления резюме" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c578401d-17fc-4b31-bb07-1d1abf6a5861" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="afdbeee6-772c-49d3-b8fd-e18a60aab88b" name="Создание резюме" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="9dff5843-ff7b-4961-a4e7-0d9dd7533a89" />
+        <subjects>
+          <subsystemMoniker Id="f8fce506-59fe-4fc8-9a93-a60610ce7555" LastKnownName="Подсистема управления резюме" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e62f8a1b-9640-4a44-a0cd-2d329ec31dde" name="Изменение резюме" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89e9ef06-f176-4937-a4d4-abdb28afb919" />
+        <extendedCases>
+          <extend Id="433e4a87-2f28-48a0-b1c2-6fb4d7519bd6">
+            <useCaseMoniker Id="afdbeee6-772c-49d3-b8fd-e18a60aab88b" LastKnownName="Создание резюме" />
+            <elementDefinition Id="f2272185-9323-4314-9a7a-a39e9544e4db" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="f8fce506-59fe-4fc8-9a93-a60610ce7555" LastKnownName="Подсистема управления резюме" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="3e7e2b1e-c2e3-4153-9ccd-987b9fbeb4a6" name="Выбор резюме для отклика" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="79a732df-49b6-40b5-b77f-13e95db9b1f0" />
+        <subjects>
+          <subsystemMoniker Id="f8fce506-59fe-4fc8-9a93-a60610ce7555" LastKnownName="Подсистема управления резюме" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <useCaseModelRootHasTypes>
+      <artifact Id="5ee2bd37-fcb0-44c8-b971-ae4eef9a706e" name="Отклик на вакансию" isAbstract="false" isLeaf="false" fileName="Sisyphus\Use Cases\Поиск работы.usecasediagram">
+        <elementDefinition Id="efe3946b-371d-4e12-aefe-da4ac6c06938" />
+        <suppliersInternal>
+          <dependency Id="9ed6f7f3-e4c7-4b16-a4be-7f3ec736c8e8" name="Резюме для отклика">
+            <useCaseMoniker Id="3e7e2b1e-c2e3-4153-9ccd-987b9fbeb4a6" LastKnownName="Выбор резюме для отклика" />
+            <elementDefinition Id="67c26da5-592f-4a34-8c78-191f59d0bde1" />
+          </dependency>
+        </suppliersInternal>
+      </artifact>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="147c6278-2030-4704-95f8-8dc19ad6b82b" name="Sisyphus">
+    <elementDefinition Id="8fcd3923-8407-4221-8d95-d93279f47982" />
+    <profileInstances>
+      <packageHasProfileInstances Id="40bfcd23-b6b7-4178-a937-94fff1708f98">
+        <profileInstance Id="4465b13b-1218-4b4b-82c9-012ccc4f64e2" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="2f629053-df09-491b-b435-01236dd4359b">
+        <profileInstance Id="a3070a17-0704-4e3d-bc62-656c1f140ceb" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>

@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="c03e3b83-2e6f-45a3-a733-d0b7005f2936" name="Utils" linkedPackageId="ea52ad86-0bbf-40d0-bc58-a0845ea40392" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="612aec52-0bf8-4f1f-bd3c-8cfb779776ef">
+      <profileInstance Id="087edc32-c562-42bd-bde2-a856f35b9c21" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="8df81cf3-fbfb-48a1-804c-412971f5c29c">
+      <profileInstance Id="f1b95122-ccef-428f-b0c4-e028ca146c9d" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="df29539f-6965-4503-ba9d-93f306f4807f" name="Product" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="08974186-adf2-4fba-9f63-3c33dd1dd0d1" />
+        <targetEnds>
+          <association Id="11d5c0e7-d7b5-4f4f-a0ec-b7dc74df1fc3" isDerived="false" sourceEndRoleName="Product" targetEndRoleName="Order" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8e1fde22-f78d-4459-8a1f-45382ed0858f" LastKnownName="Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5ade31dd-7e1f-430f-a003-b91bf13bae7c" name="Product" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Shared" isComposite="false" isNavigableOwned="false">
+                  <lowerValueInternal>
+                    <literalString Id="0d3db4ff-b77d-4b32-a3a5-ac0bcd00dd8f" name="Lower" value="1">
+                      <elementDefinition Id="7bdafa33-3ac2-457f-8236-6ce7457be119" />
+                    </literalString>
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString Id="b33772e6-934d-424d-a9d6-e9e877723c71" name="Upper" value="1">
+                      <elementDefinition Id="bdbc47c9-8b6c-4ac0-8880-393a996904bf" />
+                    </literalString>
+                  </upperValueInternal>
+                  <elementDefinition Id="ad9eb3f6-8040-4eac-a1f1-b2c89fe99c7b" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8fe71424-c043-45ad-8c47-969a81f1705d" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="62a59257-152e-4790-af26-46b1603ff5df" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="04c264ed-95dc-4367-b4cb-4cc9b7244fbc" />
+          </association>
+          <association Id="d4f931b7-cf9e-48de-a2dd-c4f761642307" isDerived="false" sourceEndRoleName="Product" targetEndRoleName="Order" isLeaf="false" isAbstract="false">
+            <classMoniker Id="8e1fde22-f78d-4459-8a1f-45382ed0858f" LastKnownName="Order" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="b51f952a-053b-4f5d-9bf9-5f8cd3f74d3d" name="Product" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="aeb1f397-7546-4bab-9b37-3699dcd4769f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e9e36a69-43fc-4799-921f-50c4a7f10e8b" name="Order" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a707b222-046e-4bf7-b4e0-1e5ed71d1e51" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42ec4c90-75e8-41ef-bbcf-dd1210cb8164" />
+          </association>
+        </targetEnds>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="8e1fde22-f78d-4459-8a1f-45382ed0858f" name="Order" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f9b8f801-c46b-4d92-976f-e0f973034277" />
+        <suppliersInternal>
+          <dependency Id="6913a51c-c45a-445e-86f2-e77a7ac64259">
+            <classMoniker Id="df29539f-6965-4503-ba9d-93f306f4807f" LastKnownName="Product" />
+            <elementDefinition Id="d3fa0ecd-cd6f-4d7a-8fca-e40de2d04557" />
+          </dependency>
+        </suppliersInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="ea52ad86-0bbf-40d0-bc58-a0845ea40392" name="Andrique.Utils.Design">
+    <elementDefinition Id="49320efe-def0-44fd-9463-2bd4aaa34d52" />
+  </package>
+</logicalClassDesignerModel>
