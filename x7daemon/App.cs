@@ -55,16 +55,29 @@ namespace x7daemon
 
 		private static void DisplayKeyUp(object sender, KeyEventArgs keyEventArgs)
 		{
-			Console.WriteLine($@"UP: {keyEventArgs.KeyCode} ({_counter++})");
+			Console.WriteLine($@"UP: {keyEventArgs.KeyCode}");
 			keyEventArgs.Handled = true;
 		}
 
 		private static void DisplayKeyDown(object sender, KeyEventArgs keyEventArgs)
 		{
-			Console.WriteLine($@"DOWN: {keyEventArgs.KeyCode} ({_counter++})");
+
+            Console.WriteLine($@"DOWN: {keyEventArgs.KeyCode}");
 
 			if (keyEventArgs.KeyCode == Keys.Return)
 				Application.Exit();
+
+			else if (keyEventArgs.KeyCode == Keys.None)
+            {
+                HookManager.KeyDown -= DisplayKeyDown;
+                HookManager.KeyUp -= DisplayKeyUp;
+
+				Console.WriteLine("We're going to inspect mysterious 'None' KeyCode...");
+
+                1.ToString();
+
+				Application.Exit();
+            }
 
 			else
 				keyEventArgs.Handled = true;
