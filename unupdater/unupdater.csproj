@@ -32,8 +32,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kw.Common, Version=1.0.1.2, Culture=neutral, PublicKeyToken=0368a69deeef33dd, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kw.Common.1.0.1.2\lib\net45\Kw.Common.dll</HintPath>
+    <Reference Include="Kw.Common, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kw.Common.1.0.0.15\lib\net45\Kw.Common.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
