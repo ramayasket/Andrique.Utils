@@ -5,12 +5,12 @@ using System.Text;
 
 namespace Andrique.Utils
 {
-	public static class Constants
-	{
-		public enum ReturnCodes
-		{
-			OK = 0,
-			RequiredArgumentMissing,
-		}
-	}
+    public static class Constants
+    {
+        public enum ReturnCodes
+        {
+            OK = 0,
+            RequiredArgumentMissing,
+        }
+    }
 }

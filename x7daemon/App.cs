@@ -16,71 +16,71 @@ using Kw.Windows.Forms;
 
 namespace x7daemon
 {
-	public class App
-	{
-		[STAThread]
-		public static void Main()
-		{
-			var i = User.GetDoubleClickTime();
+    public class App
+    {
+        [STAThread]
+        public static void Main()
+        {
+            var i = User.GetDoubleClickTime();
 
-			Console.WriteLine(Console.Title);
-			
-			HookManager.KeyDown += DisplayKeyDown;
-			HookManager.KeyUp += DisplayKeyUp;
+            Console.WriteLine(Console.Title);
+            
+            HookManager.KeyDown += DisplayKeyDown;
+            HookManager.KeyUp += DisplayKeyUp;
 
-			//HookManager.KeyDown += Daemon.OnKeyDown;
-			//HookManager.KeyUp += Daemon.OnKeyUp;
+            //HookManager.KeyDown += Daemon.OnKeyDown;
+            //HookManager.KeyUp += Daemon.OnKeyUp;
 
-			Console.WriteLine(@"Press ENTER to quit...");
-			ExecutionThread.StartNew(ReadLineAgent);
+            Console.WriteLine(@"Press ENTER to quit...");
+            ExecutionThread.StartNew(ReadLineAgent);
 
-			Application.Run();
+            Application.Run();
 
-			AppCore.Stop();
+            AppCore.Stop();
 
-			HookManager.KeyDown -= DisplayKeyDown;
-			HookManager.KeyUp -= DisplayKeyUp;
+            HookManager.KeyDown -= DisplayKeyDown;
+            HookManager.KeyUp -= DisplayKeyUp;
 
-			//HookManager.KeyDown -= Daemon.OnKeyDown;
-			//HookManager.KeyUp -= Daemon.OnKeyUp;
-		}
+            //HookManager.KeyDown -= Daemon.OnKeyDown;
+            //HookManager.KeyUp -= Daemon.OnKeyUp;
+        }
 
-		private static void ReadLineAgent()
-		{
-			Console.ReadLine();
-			Application.Exit();
-		}
+        private static void ReadLineAgent()
+        {
+            Console.ReadLine();
+            Application.Exit();
+        }
 
-		private static int _counter = 0;
+        private static int _counter = 0;
 
-		private static void DisplayKeyUp(object sender, KeyEventArgs keyEventArgs)
-		{
-			Console.WriteLine($@"UP: {keyEventArgs.KeyCode}");
-			keyEventArgs.Handled = true;
-		}
+        private static void DisplayKeyUp(object sender, KeyEventArgs keyEventArgs)
+        {
+            Console.WriteLine($@"UP: {keyEventArgs.KeyCode}");
+            keyEventArgs.Handled = true;
+        }
 
-		private static void DisplayKeyDown(object sender, KeyEventArgs keyEventArgs)
-		{
+        private static void DisplayKeyDown(object sender, KeyEventArgs keyEventArgs)
+        {
 
             Console.WriteLine($@"DOWN: {keyEventArgs.KeyCode}");
 
-			if (keyEventArgs.KeyCode == Keys.Return)
-				Application.Exit();
+            if (keyEventArgs.KeyCode == Keys.Return)
+                Application.Exit();
 
-			else if (keyEventArgs.KeyCode == Keys.None)
+            else if (keyEventArgs.KeyCode == Keys.None)
             {
                 HookManager.KeyDown -= DisplayKeyDown;
                 HookManager.KeyUp -= DisplayKeyUp;
 
-				Console.WriteLine("We're going to inspect mysterious 'None' KeyCode...");
+                Console.WriteLine("We're going to inspect mysterious 'None' KeyCode...");
 
                 1.ToString();
 
-				Application.Exit();
+                Application.Exit();
             }
 
-			else
-				keyEventArgs.Handled = true;
-		}
-	}
+            else
+                keyEventArgs.Handled = true;
+        }
+    }
 }

@@ -5,8 +5,8 @@ using System.Text;
 
 namespace Andrique.Utils
 {
-	public abstract class ConsoleUtilityBase : UtilityBase
-	{
-		//public void PrintUsage
-	}
+    public abstract class ConsoleUtilityBase : UtilityBase
+    {
+        //public void PrintUsage
+    }
 }

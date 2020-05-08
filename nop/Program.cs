@@ -8,13 +8,13 @@ using System.Windows.Forms;
 
 namespace Andrique.Utils.NoOperation
 {
-	class Program
-	{
-		static void Main()
-		{
-			var mtx = new Mutex(false, "zlp");
+    class Program
+    {
+        static void Main()
+        {
+            var mtx = new Mutex(false, "zlp");
 
-			Console.ReadLine();
-		}
-	}
+            Console.ReadLine();
+        }
+    }
 }

@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace kkalist
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			var actors = File.ReadAllText("S:\\24a.txt").Replace(Environment.NewLine, "");
-		}
-	}
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var actors = File.ReadAllText("S:\\24a.txt").Replace(Environment.NewLine, "");
+        }
+    }
 }
