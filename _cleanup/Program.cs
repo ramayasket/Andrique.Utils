@@ -14,7 +14,6 @@ namespace _cleanup
     /// </remarks>>
     static class Program
     {
-        //private const string _GSDATA_ = "_gsdata_";
         private const string _CLEANUP = "_cleanup.xml";
         private const string COMMAND = "command";
         private const string JOB = "job";
@@ -22,7 +21,7 @@ namespace _cleanup
         private const string REMAINS = "remains";
 
         /// <summary>
-        /// Writes logs to _gsdata_/_cleanup.log.
+        /// Writes logs to _cleanup.log.
         /// </summary>
         private static StreamWriter _writer;
 
@@ -36,11 +35,6 @@ namespace _cleanup
         /// </summary>
         private static string _target;
 
-        //// <summary>
-        //// GoodSync service directory.
-        //// </summary>
-        ////private static string _gsdata_;
-
         /// <summary>
         /// Path to log file
         /// </summary>
@@ -48,7 +42,7 @@ namespace _cleanup
 
         private static int TryParse(this string s)
         {
-            int i; int.TryParse(s, out i); return i;
+            int.TryParse(s, out var i); return i;
         }
 
         private static int? Parse(this string s)
@@ -140,9 +134,7 @@ namespace _cleanup
 
             Environment.CurrentDirectory = _target;
 
-            //
-            //    Existence of _target and _gsdata_ are pre-conditions
-            //
+            // target must exist :)
             if (!Directory.Exists(_target))
                 return;
 
