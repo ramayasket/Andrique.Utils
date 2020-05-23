@@ -14,7 +14,7 @@ namespace _cleanup
     /// </remarks>>
     static class Program
     {
-        private const string _GSDATA_ = "_gsdata_";
+        //private const string _GSDATA_ = "_gsdata_";
         private const string _CLEANUP = "_cleanup.xml";
         private const string COMMAND = "command";
         private const string JOB = "job";
@@ -36,10 +36,10 @@ namespace _cleanup
         /// </summary>
         private static string _target;
 
-        /// <summary>
-        /// GoodSync service directory.
-        /// </summary>
-        private static string _gsdata_;
+        //// <summary>
+        //// GoodSync service directory.
+        //// </summary>
+        ////private static string _gsdata_;
 
         /// <summary>
         /// Path to log file
@@ -137,24 +137,22 @@ namespace _cleanup
         private static void CleanupTarget(string target)
         {
             _target = Path.GetFullPath(target);
-            _gsdata_ = Path.Combine(_target, _GSDATA_);
 
             Environment.CurrentDirectory = _target;
 
             //
             //    Existence of _target and _gsdata_ are pre-conditions
             //
-            if (!(new[] {_target, _gsdata_}).All(Directory.Exists))
+            if (!Directory.Exists(_target))
                 return;
 
-            _log = Path.Combine(_gsdata_, "_cleanup.log");
+            _log = Path.Combine(_target, "_cleanup.log");
 
             using (_writer = new StreamWriter(_log))
             {
                 WriteLine($"Cleanup of {_target} started");
-                WriteLine($"Gsdata in {_gsdata_}");
 
-                var xml = Path.Combine(_gsdata_, _CLEANUP);
+                var xml = Path.Combine(_target, _CLEANUP);
 
                 if (File.Exists(xml))
                 {
@@ -191,7 +189,7 @@ namespace _cleanup
         /// </summary>
         private static void CleanupJob(Entry job)
         {
-            var vall = Directory.EnumerateFiles(_gsdata_).ToArray();
+            var vall = Directory.EnumerateFiles(_target).ToArray();
             var all = vall.Where(l => l.EndsWith(job.Pattern)).OrderBy(l => l).ToArray();
 
             var cut = all.Length - job.Remains.GetValueOrDefault();

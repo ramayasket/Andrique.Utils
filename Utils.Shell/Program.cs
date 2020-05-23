@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
@@ -42,9 +44,39 @@ namespace Utils.Shell
 
     class Program
     {
+        private const uint WM_KEYDOWN = 0x0100;
+        private const uint WM_KEYUP = 0x0101;
+
+        [return: MarshalAs(UnmanagedType.Bool)]
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        static extern bool PostMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
+        [return: MarshalAs(UnmanagedType.Bool)]
+        [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
+        static extern bool SendMessage(IntPtr hWnd, uint Msg, IntPtr wParam, IntPtr lParam);
+
         static void Main(string[] args)
         {
-            //var mtx = Mutex.OpenExisting("DBWinMutex1");
+            var hwnd = IntPtr.Zero;
+
+            foreach (Process pList in Process.GetProcesses()) {
+                if (pList.MainWindowTitle.Contains("MSK-BACKEND30 - Desktop Viewer")) {
+                    hwnd = pList.MainWindowHandle;
+                    break;
+                }
+            }
+
+            if (IntPtr.Zero != hwnd) {
+
+                IntPtr wParam = new IntPtr(0x41);
+
+                var s1 = PostMessage(hwnd, WM_KEYDOWN, wParam, IntPtr.Zero);
+                var s2 = PostMessage(hwnd, WM_KEYUP, wParam, IntPtr.Zero);
+            }
+        }
+
+        private static void SomethingWithVKs()
+        { //var mtx = Mutex.OpenExisting("DBWinMutex1");
 
             var vks = EnumHelper.GetValues<VK>().Cast<int>().Distinct().Cast<VK>().OrderBy(k => k.ToString()).ToArray();
             var keys = EnumHelper.GetValues<Keys>().Cast<int>().Distinct().Cast<Keys>().OrderBy(k => k.ToString()).ToArray();
@@ -55,10 +87,9 @@ namespace Utils.Shell
 
             var scommons = new StringBuilder();
 
-            foreach (var k in commons)
-            {
-                Console.WriteLine($"{(VK)k} {(Keys)k}");
-                scommons.AppendLine($"{(VK)k} {(Keys)k}");
+            foreach (var k in commons) {
+                Console.WriteLine($"{(VK) k} {(Keys) k}");
+                scommons.AppendLine($"{(VK) k} {(Keys) k}");
             }
 
             var scs = scommons.ToString();
@@ -67,8 +98,7 @@ namespace Utils.Shell
 
             var vks_e = vks.Cast<int>().Except(commons).Cast<VK>().ToArray();
 
-            foreach (var k in vks_e)
-            {
+            foreach (var k in vks_e) {
                 Console.WriteLine($"{k}");
             }
 
@@ -76,11 +106,9 @@ namespace Utils.Shell
 
             var keys_e = keys.Cast<int>().Except(commons).Cast<Keys>().ToArray();
 
-            foreach (var k in keys_e)
-            {
+            foreach (var k in keys_e) {
                 Console.WriteLine($"{k}");
             }
-
         }
     }
 }
