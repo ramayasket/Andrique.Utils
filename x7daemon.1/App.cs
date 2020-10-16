@@ -121,11 +121,11 @@ namespace x7daemon
             if (User.GetForegroundWindow() != under)
                 User.SetForegroundWindow(under);
 
-            //if (User.GetForegroundWindow() == under)
-            //    Debug.WriteLine($"Switched to {GetWindowTitle(under)}");
+            if (User.GetForegroundWindow() == under)
+                Debug.WriteLine($"Switched to {GetWindowTitle(under)}");
 
-            //else
-            //    Debug.WriteLine($"Couldn't switch to {GetWindowTitle(under)}");
+            else
+                Debug.WriteLine($"Couldn't switch to {GetWindowTitle(under)}");
         }
 
         private static void ReportWindowTitle(IntPtr hwnd)

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{BA4D6C9B-8D96-497F-A805-F29C97B1601B}</ProjectGuid>
+    <ProjectGuid>{1C646BD9-7853-40E7-B5D7-0ECA7F2E884A}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>x7daemon</RootNamespace>
-    <AssemblyName>x7daemon</AssemblyName>
+    <RootNamespace>Andrique.Shell</RootNamespace>
+    <AssemblyName>Andrique.Shell</AssemblyName>
     <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -22,8 +22,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <CodeAnalysisIgnoreGeneratedCode>true</CodeAnalysisIgnoreGeneratedCode>
     <CodeAnalysisRuleSet>..\etc\Andrique.ruleset</CodeAnalysisRuleSet>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -33,21 +33,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
-  </PropertyGroup>
-  <PropertyGroup>
-    <ApplicationIcon>m1.ico</ApplicationIcon>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Kw.Common, Version=1.3.1.0, Culture=neutral, PublicKeyToken=c3a63dab86fe71a1, processorArchitecture=MSIL">
       <HintPath>..\packages\Kw.Common.1.3.1\lib\netstandard2.0\Kw.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Kw.WinAPI, Version=1.3.2.1, Culture=neutral, PublicKeyToken=c3a63dab86fe71a1, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kw.WinAPI.1.3.2.1\lib\net47\Kw.WinAPI.dll</HintPath>
+    <Reference Include="Kw.WinAPI, Version=1.3.2.0, Culture=neutral, PublicKeyToken=c3a63dab86fe71a1, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kw.WinAPI.1.3.2\lib\net47\Kw.WinAPI.dll</HintPath>
     </Reference>
     <Reference Include="Kw.Windows.Forms, Version=1.3.0.0, Culture=neutral, PublicKeyToken=c3a63dab86fe71a1, processorArchitecture=MSIL">
       <HintPath>..\packages\Kw.Windows.Forms.1.3.0\lib\net47\Kw.Windows.Forms.dll</HintPath>
@@ -64,26 +59,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.cs" />
-    <Compile Include="Daemon.cs" />
+    <Compile Include="LPARAM.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Properties\Resources.Designer.cs" />
-    <Compile Include="Properties\Settings.Designer.cs" />
+    <Compile Include="Zlp.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="app.config" />
     <None Include="packages.config" />
-    <None Include="Properties\Settings.settings" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Properties\Resources.resx" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="m1.ico" />
+    <Content Include="citrix.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>cmd.exe /c del system.*
-cmd.exe /c del microsoft.*</PostBuildEvent>
-  </PropertyGroup>
 </Project>

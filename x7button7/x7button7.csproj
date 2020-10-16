@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Andrique.Utils.X7Actions</RootNamespace>
     <AssemblyName>x7button7</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
@@ -65,11 +65,11 @@
     <CodeAnalysisRuleSet>..\etc\Andrique.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kw.Common, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kw.Common.1.0.0.15\lib\net45\Kw.Common.dll</HintPath>
+    <Reference Include="Kw.Common, Version=1.2.2.2, Culture=neutral, PublicKeyToken=0368a69deeef33dd, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kw.Common.1.2.2.2\lib\net47\Kw.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Kw.WinAPI, Version=1.0.0.15, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kw.WinAPI.1.0.0.15\lib\net45\Kw.WinAPI.dll</HintPath>
+    <Reference Include="Kw.WinAPI, Version=1.2.0.1, Culture=neutral, PublicKeyToken=0368a69deeef33dd, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kw.WinAPI.1.2.0.1\lib\net47\Kw.WinAPI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -95,7 +95,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="app.config" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
