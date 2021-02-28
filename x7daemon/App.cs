@@ -19,7 +19,7 @@ using System.Windows.Input;
 
 //// ReSharper disable AssignNullToNotNullAttribute
 
-namespace x7daemon
+namespace clipcopy
 {
     public class App
     {

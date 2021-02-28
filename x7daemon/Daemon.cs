@@ -13,7 +13,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace x7daemon
+namespace clipcopy
 {
     public enum KeyMove
     {

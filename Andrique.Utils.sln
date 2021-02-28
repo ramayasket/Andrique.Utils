@@ -31,7 +31,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Andrique.Shell", "Andrique.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "x7daemon", "x7daemon\x7daemon.csproj", "{BA4D6C9B-8D96-497F-A805-F29C97B1601B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1\ConsoleApp1.csproj", "{1B8EFAC9-24C5-4D6D-8799-E10D9CC408B4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "calendar", "calendar\calendar.csproj", "{D14720F5-7E8C-4BC1-BF86-971C5A26381C}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "launch", "launch\launch.csproj", "{8F88AA89-9788-4D66-BB79-AFFCFD633269}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "clipcopy", "clipcopy\clipcopy.csproj", "{7120BC3D-E24E-4875-95F8-A3A8E3CC0E85}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{F799D8DC-9342-447D-8CD4-EEEBC53CA6A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -79,10 +85,22 @@ Global
 		{BA4D6C9B-8D96-497F-A805-F29C97B1601B}.debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA4D6C9B-8D96-497F-A805-F29C97B1601B}.release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA4D6C9B-8D96-497F-A805-F29C97B1601B}.release|Any CPU.Build.0 = Release|Any CPU
-		{1B8EFAC9-24C5-4D6D-8799-E10D9CC408B4}.debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1B8EFAC9-24C5-4D6D-8799-E10D9CC408B4}.debug|Any CPU.Build.0 = Debug|Any CPU
-		{1B8EFAC9-24C5-4D6D-8799-E10D9CC408B4}.release|Any CPU.ActiveCfg = Release|Any CPU
-		{1B8EFAC9-24C5-4D6D-8799-E10D9CC408B4}.release|Any CPU.Build.0 = Release|Any CPU
+		{D14720F5-7E8C-4BC1-BF86-971C5A26381C}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D14720F5-7E8C-4BC1-BF86-971C5A26381C}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{D14720F5-7E8C-4BC1-BF86-971C5A26381C}.release|Any CPU.ActiveCfg = Release|Any CPU
+		{D14720F5-7E8C-4BC1-BF86-971C5A26381C}.release|Any CPU.Build.0 = Release|Any CPU
+		{8F88AA89-9788-4D66-BB79-AFFCFD633269}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F88AA89-9788-4D66-BB79-AFFCFD633269}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F88AA89-9788-4D66-BB79-AFFCFD633269}.release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F88AA89-9788-4D66-BB79-AFFCFD633269}.release|Any CPU.Build.0 = Release|Any CPU
+		{7120BC3D-E24E-4875-95F8-A3A8E3CC0E85}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7120BC3D-E24E-4875-95F8-A3A8E3CC0E85}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{7120BC3D-E24E-4875-95F8-A3A8E3CC0E85}.release|Any CPU.ActiveCfg = Release|Any CPU
+		{7120BC3D-E24E-4875-95F8-A3A8E3CC0E85}.release|Any CPU.Build.0 = Release|Any CPU
+		{F799D8DC-9342-447D-8CD4-EEEBC53CA6A9}.debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F799D8DC-9342-447D-8CD4-EEEBC53CA6A9}.debug|Any CPU.Build.0 = Debug|Any CPU
+		{F799D8DC-9342-447D-8CD4-EEEBC53CA6A9}.release|Any CPU.ActiveCfg = Release|Any CPU
+		{F799D8DC-9342-447D-8CD4-EEEBC53CA6A9}.release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
